@@ -116,11 +116,9 @@ Figure 1
   
      <p>
             <img src="" 
-       <img src="Picture 1.jng" alt="Banner" width="1000" height="300">
+       <img src="nihms-1538024-f0001.jpg" alt="Banner" width="1000" height="300">
      </p>
-                   <a href=https://pubmed.ncbi.nlm.nih.gov/32132118/>Trinidad,(2020)</a>
-              <img src="nihms-1538024-f0001.jpg" alt="image" width="300" height="150">
-              
+                 
 <h3 id="Analysis and discussion">Monitoring true progress</h3>
 
 Despite there being numerous positives when it comes to early diagnosis, is there a significant amount of progress being made? This can be evaluated via process and outcome measures, which are intervention specific as one of the measures cannot be 
@@ -133,7 +131,7 @@ allows for an evaluation. Given that early diagnoses open a door to early treatm
 
 By tracking outcome measures you can pinpoint whether screen is helping with mortality. Figures show that deaths lowered by 9% of women living in Ireland with screening compared to women of the same age group introduced to screening 8 years later (Mayor, 2017).
 A weakness with this percentage is that it is only representative to Irish women. On the other hand, the researcher utilises this weakness by comparing the figure to other regions other than Ireland such as the Netherlands. As after 23 years of screening for breast 
-cancer the mortality rate went from 0% to 5% (Pizot, 2017). This case study is seen as reliable as many years of evidence has been built for this figure to prove that the mortality rate has decreased.
+cancer the mortality rate went from 0% to 5%  <a href=”https://www.researchgate.net/publication/314132932_Abstract_P5-08-04_Overview_of_breast_cancer_mortality_trends_in_the_world">Pizot (2017)</a>. This case study is seen as reliable as many years of evidence has been built for this figure to prove that the mortality rate has decreased.
 
 Despite this case study being reliable the many years of evidence needed must have been very time consuming and very expensive to fund. Therefore, process measures are introduced to provide an earlier indication of how successful early diagnosis is. This proves how a 
 combination of measures is needed to overcome any weaknesses of the study. As when used alone they are unable to measure the true progress researchers need.
@@ -152,92 +150,109 @@ are left with stress and depression (Lewandowska, 2020). However, this study doe
 Overall early diagnosis come with both positives and negatives in this case the positives weigh out the negatives. As detecting the cancer and having better treatment options available manages to reduce the risk of mortality. Significant progress is being made to a certain extent
 as overdiagnosis and lead term bias prevents true figures of the mortality rates.
 
-</p>
 
-<h3 id=”References”>References:</h3>
+ </p>
+
+   <h3 id=”References”>References:</h3>
 <p>
   <pre>
+
 Pashayan, N. & Pharoah, P. D. P. (2020) The challenge of early detection in cancer. Science (American Association for the Advancement of Science). [Online] 368 (6491), 589–590.
 Trinidad, C. V. et al. (2020) Reducing Ovarian Cancer Mortality Through Early Detection: Approaches Using Circulating Biomarkers. Cancer prevention research. [Online] 13 (3), 241–252.
 Mayor, S. (2017) Mammography screening reduces breast cancer deaths in Ireland, study finds. BMJ (Online). [Online] 359j5932-.
 Pizot, C. et al. (2017) Abstract P5-08-04: Overview of breast cancer mortality trends in the world. Cancer research (Chicago, Ill.). [Online] 77 (4_Supplement), P5-P5-08–04.
 Lewandowska, A. et al. (2020) Quality of Life of Cancer Patients Treated with Chemotherapy. International journal of environmental research and public health. [Online] 17 (19), 6938-.
+  
+  
   </pre>
 </p>
 
-              <div id="wordCountDisplay"></div>
-    <script>
-        // Function to calculate word count for a specific section
-        function calculateSectionWordCount(selector) {
-            const section = document.querySelector(selector);
-            if (!section) {
-                console.error(`No element found with selector: ${selector}`);
-                return 0;
-            }
-            // Get the text content of the section
-            const text = section.innerText || section.textContent;
-            // Match words using a regular expression
-            const words = text.match(/\b\w+\b/g);
-            // Return the word count (if no words, return 0)
-            return words ? words.length : 0;
-        }
-        // Function to display the word count
-        function displaySectionWordCount(selector) {
-            const wordCount = calculateSectionWordCount(selector);
-            const displayElement = document.getElementById('wordCountDisplay');
-            
-            if (displayElement) {
-                displayElement.textContent = `Word Count for this page: ${wordCount}`;
-            }
-        }
-        // Run the word count calculation when the page loads
-        window.onload = () => {
-            displaySectionWordCount('#articlepaper');
-        };
-        </script>
+             <div id="last-updated">Loading last update time...</div>
 
- <!-- Last commit time display -->
-<div id="last-updated">Loading last update time...</div>
-<!-- Verify Button -->
 <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-    Verify Last Modified Time
+    Verify Last Modified Time
 </button>
 <script>
-    async function getLastUpdatedTime() {
-        const username = 'FEPSFY6883784';
-        const repo = 'FY6883784';
-       
-        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-        try {
-            const response = await fetch(url, {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                }
-            });
-            if (!response.ok) {
-                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
-            }
-            const commits = await response.json();
-            if (commits && commits.length > 0) {
-                const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
-                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
-            } else {
-                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-            }
-        } catch (error) {
-            console.error('Error fetching the last updated time:', error);
-            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
-        }
-    }
-    // Function to verify the last update time by re-fetching it from the API
-    async function verifyLastUpdatedTime() {
-        document.getElementById('last-updated').innerText = 'Verifying...';
-        await getLastUpdatedTime();
-        alert("Last modified time has been successfully verified from GitHub API.");
-    }
-    // Initial load to display the time on page load
-    window.onload = getLastUpdatedTime;
+    async function getLastUpdatedTime() {
+        const username = 'FEPSFY6883784';
+        const repo = 'FY6883784';
+       
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+               
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+        } catch (error) {
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+        }
+    }
+    
+    async function verifyLastUpdatedTime() {
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
+    }
+  
+    window.onload = getLastUpdatedTime;
 </script>
+     
+    </html>
+
+<div id="wordCountDisplay"></div>
+    <script>
+        // Function to calculate word count for a specific section
+        function calculateSectionWordCount(selector) {
+            const section = document.querySelector(selector);
+            if (!section) {
+                console.error(`No element found with selector: ${selector}`);
+                return 0;
+            }
+            // Get the text content of the section
+            const text = section.innerText || section.textContent;
+            // Match words using a regular expression
+            const words = text.match(/\b\w+\b/g);
+            // Return the word count (if no words, return 0)
+            return words ? words.length : 0;
+        }
+        // Function to display the word count
+        function displaySectionWordCount(selector) {
+            const wordCount = calculateSectionWordCount(selector);
+            const displayElement = document.getElementById('wordCountDisplay');
+            
+            if (displayElement) {
+                displayElement.textContent = `Word Count for this page: ${wordCount}`;
+            }
+        }
+        // Run the word count calculation when the page loads
+        window.onload = () => {
+            displaySectionWordCount('#paper');
+        };
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
