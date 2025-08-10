@@ -177,6 +177,11 @@ Lewandowska, A. et al. (2020) Quality of Life of Cancer Patients Treated with Ch
       <video src="Presentation2.pptx" width="800" height="450" controls>
 </video>            
         
+!-- Last commit time display -->
+<div id="last-updated">Loading last update time...</div>
+<!-- Verify Button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+
 Verify Last Modified Time
 </button>
 <script>
@@ -217,10 +222,10 @@ Verify Last Modified Time
     }
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
-</script><div id="wordCountDisplay"></div>
-    <script>
+</script>  
 
-      
+  <div id="wordCountDisplay"></div>
+    <script>
         // Function to calculate word count for a specific section
         function calculateSectionWordCount(selector) {
             const section = document.querySelector(selector);
@@ -246,20 +251,9 @@ Verify Last Modified Time
         }
         // Run the word count calculation when the page loads
         window.onload = () => {
-            displaySectionWordCount('#paper');
+            displaySectionWordCount('#articlepaper');
         };
         </script>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
