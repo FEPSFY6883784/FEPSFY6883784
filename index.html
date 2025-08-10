@@ -220,6 +220,42 @@ async function verifyLastUpdatedTime() {
 window.onload = getLastUpdatedTime;
 </script>
 
+<div id="wordCountDisplay"></div>
+    <script>
+        // Function to calculate word count for a specific section
+        function calculateSectionWordCount(selector) {
+            const section = document.querySelector(selector);
+            if (!section) {
+                console.error(`No element found with selector: ${selector}`);
+                return 0;
+            }
+            // Get the text content of the section
+            const text = section.innerText || section.textContent;
+            // Match words using a regular expression
+            const words = text.match(/\b\w+\b/g);
+            // Return the word count (if no words, return 0)
+            return words ? words.length : 0;
+        }
+        // Function to display the word count
+        function displaySectionWordCount(selector) {
+            const wordCount = calculateSectionWordCount(selector);
+            const displayElement = document.getElementById('wordCountDisplay');
+            
+            if (displayElement) {
+                displayElement.textContent = `Word Count for this page: ${wordCount}`;
+            }
+        }
+        // Run the word count calculation when the page loads
+        window.onload = () => {
+            displaySectionWordCount('#paper');
+        };
+        </script>
+
+
+
+
+
+
 
 
 
